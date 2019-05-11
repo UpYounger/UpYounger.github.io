@@ -1,0 +1,401 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!doctype html>
+<html lang>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+  <meta name="renderer" content="webkit">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" , user-scalable="no"">
+  <title>java题目整理AFBLOG</title>
+  <link rel="shortcut icon" href>
+  
+    
+    
+      <link rel="stylesheet" href="/css/bootstrap.min.css">
+    
+      <link rel="stylesheet" href="/css/font-awesome.min.css">
+    
+      <link rel="stylesheet" href="/css/atom-one-dark.css">
+    
+      <link rel="stylesheet" href="/css/jquery.fancybox.css">
+    
+      <link rel="stylesheet" href="/css/nprogress.min.css">
+    
+      <link rel="stylesheet" href="/css/valine.css">
+    
+      <link rel="stylesheet" href="/css/life.css">
+    
+  
+
+  
+
+  <!-- jQuery first, then Tether, then Bootstrap JS. -->
+  
+  
+  
+    <script src="/js/jquery-2.2.4.min.js"></script>
+  
+    <script src="https://cdn1.lncld.net/static/js/3.1.0/av-min.js"></script>
+  
+    <script src="/js/jquery.pjax.js"></script>
+  
+    <script src="/js/nprogress.min.js"></script>
+  
+    <script src="/js/tether.min.js"></script>
+  
+    <script src="/js/bootstrap.min.js"></script>
+  
+    <script src="/js/highlight.min.js"></script>
+  
+    <script src="/js/highlightjs-line-numbers.min.js"></script>
+  
+    <script src="/js/jquery.fancybox.js"></script>
+  
+    <script src="/js/jquery.qrcode.min.js"></script>
+  
+    <script src="/js/Valine.min.js"></script>
+  
+  
+</head>
+<body>
+<script>AV.init({appId:'',appKey:''});</script>
+<script type="text/javascript">
+      var config = {
+            ClasS: 'Counter',
+            el:'.views',
+            elP: '.views-post'
+      }
+</script>
+<div class="container">
+    <div class="row blog-box-shadow">
+        <!--博客主栏开始-->
+        <div class="col-xl-9 col-lg-12 blog-main" id="pjax-box">
+            <header class="blog-header">
+                <a href="http://yoursite.com" class="blog-header-mobile-title">AFBLOG</a>
+                <a href="javascript:;" class="blog-header-navbar-btn"><i class="fa fa-bars"></i></a>
+                <nav class="blog-header-navbar blog-header-fixed">
+                    <ul class="blog-navbar-links">
+                        
+                          <li class="blog-nav-item"><a href="/" class="transition">首页</a></li>
+                        
+                          <li class="blog-nav-item"><a href="/about/" class="transition">关于</a></li>
+                        
+                          <li class="blog-nav-item"><a href="/links/" class="transition">链接</a></li>
+                        
+                        <div class="blog-navbar-right">
+                            <form action>
+                                <div class="input-group">
+                                    <input type="text" class="blog-header-search" placeholder="search...">
+                                    <buttn type="submit" class="blog-header-search-btn"><i class="fa fa-search"></i></buttn>
+                                </div>
+                            </form>
+                        </div>
+                    </ul>
+                </nav>
+            </header>
+                
+<header class="blog-post-page-title">
+    <h4>java题目整理</h4>
+    <time datetime="2017-06-23T09:20:34.000Z"><i class="fa fa-clock-o"></i>2017-06-23</time>
+    
+    
+    
+    
+	
+    
+</header>
+<div class="blog-main-post blog-post-page-box">
+    <article class="blog-post-block blog-post-page-content">
+        <section>
+            
+                <p>面试题型大纲</p>
+<p>面试题模块儿包含了十九个模块，分别为：java基础、容器、多线程、反射、对象拷贝、java Web模块、异常、网络、设计模式、spring/springMVC、spring Boot/spring Cloud、Hibernate、Mybatis、RabbitMQ、kafka、Zookeeper、Mysql、Redis、JVM</p>
+<p>​                                                  </p>
+<h1 id="1、-Java基础题目整理"><a href="#1、-Java基础题目整理" class="headerlink" title="1、 Java基础题目整理"></a>1、 Java基础题目整理</h1><h2 id="1、-Jdk与jre有什么区别？"><a href="#1、-Jdk与jre有什么区别？" class="headerlink" title="1、 Jdk与jre有什么区别？"></a>1、 Jdk与jre有什么区别？</h2><p>JRE是java运行时的环境，包含了java虚拟机、java基础类库，是使用java语言编写的程序运行时所需要的软件环境，是提供给想要运行java程序的用户使用的。</p>
+<p>JDK是java开发工具包，是程序员使用java开发java程序所需要的开发工具包，是提供给程序员使用的。JDK包含了JRE，同时还包含了编译java源码的javac，还包含了很多Java程序调试和分析的工具：jconsole、jvisualvm等工具软件，还包含了编写java程序所需的文档和案例程序。</p>
+<h2 id="2、-和eauals的区别是什么？"><a href="#2、-和eauals的区别是什么？" class="headerlink" title="2、= = 和eauals的区别是什么？"></a>2、= = 和eauals的区别是什么？</h2><p>对于基本数据类型来说：== 比较的是两者的值是否相等</p>
+<p>对于引用数据类型来说（对象）：</p>
+<p>（1）“==”比较的是引用的地址是否相同（即是否是同一辆汽车（注意，只有一辆汽车））；Object中的.equals()方法和”==’功能一样</p>
+<p>（2）但是String类中的.equals()方法重写了，比较的是两个引用对象的内容是否相同（即是否是完全相同的汽车（注意，有两辆汽车，且一模一样，完全相同））。</p>
+<p>==用于比较数据是否相等，如果用它在比较对象的话，它只能比较对象在栈的内容是否相同。而eqals函数用来比较对象的内容是否相等（堆里的内容）。</p>
+<p>（栈用来保存对象的引用，对象的的内容放在堆里面，由栈的引用指向他，java里的数组也是如此。）</p>
+<h2 id="3-两个对象的-hashCode-相同，则-equals-也一定为-true，对吗？"><a href="#3-两个对象的-hashCode-相同，则-equals-也一定为-true，对吗？" class="headerlink" title="3. 两个对象的 hashCode() 相同，则 equals() 也一定为 true，对吗？"></a>3. 两个对象的 hashCode() 相同，则 equals() 也一定为 true，对吗？</h2><p>不对！两个对象equals相等，则他们的hashCode()必须相等，反之不一定。</p>
+<p>​    详解：</p>
+<p>​    hashCode是继承自<strong>Object</strong>的方法，首先看hashCode方法的定义：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">public native int hashCode();</span><br></pre></td></tr></table></figure>
+<p>​    可见hashCode方法是一个native方法【”A native method is a Java method whose implementation is provided by non-java code.”】，因为native方法是由非Java语言实现的，所以这个方法的定义中也没有具体的实现。根据jdk文档，该方法的实现一般是<strong>“通过将该对象的内部地址转换成一个整数来实现的”</strong>，这个返回值就作为该对象的哈希码值返回。</p>
+<p>​    由此可知<strong>默认情况下</strong>：</p>
+<p>​    两个对象==相等，则其hashcode一定相等，反之不一定成立。</p>
+<p>​    两个对象equals相等，则其hashcode一定相等，反之不一定成立。【和上一条等价，因为Object的equals实现用的就是 对象的==相等来判断】</p>
+<p>​    如果equals方法和hashCode方法<strong>被重写</strong>，则需满足<strong>hashCode 的常规协定</strong>：</p>
+<p>​    1.在 Java 应用程序执行期间，在对同一对象多次调用 hashCode 方法时，必须一致地返回相同的整数，前提是将对象进行 equals 比较时所用的信息没有被修改。从某一应用程序的一次执行到同一应用程序的另一次执行，该整数无需保持一致。</p>
+<p>​    2.如果根据 equals(Object) 方法，两个对象是相等的，那么对这两个对象中的每个对象调用 hashCode 方法都必须生成相同的整数结果。</p>
+<p>​    3.如果根据 <a href="#equals(java.lang.Object">equals(java.lang.Object)</a>) 方法，两个对象不相等，那么对这两个对象中的任一对象上调用 hashCode 方法不要求一定生成不同的整数结果。但是，程序员应该意识到，<strong>为不相等的对象生成不同整数结果可以提高哈希表的性能</strong>。</p>
+<p>​    所以按规定<strong>重写的情况下</strong>：</p>
+<p>​    两个对象equals相等，则它们的hashcode必须相等，反之则不一定。</p>
+<p>​    两个对象==相等，则它们的hashcode必须相等，反之则不一定。【==相等，则equals必然相等】</p>
+<p>​    所以总的来说，只要按照规定，则有：</p>
+<p>​    两个对象equals相等，则它们的hashcode必须相等，反之则不一定。 </p>
+<p>Hash散列值有冲突的情况，虽然概率很低。</p>
+<p><a href="https://www.cnblogs.com/jesonjason/p/5492208.html" target="_blank" rel="noopener">https://www.cnblogs.com/jesonjason/p/5492208.html</a></p>
+<h2 id="4-final-在-java-中有什么作用？"><a href="#4-final-在-java-中有什么作用？" class="headerlink" title="4. final 在 java 中有什么作用？"></a>4. final 在 java 中有什么作用？</h2><p>final 修饰一个类时，这个类将不会被继承，同时该类的所有成员方法都会被隐式的指定为fianal方法</p>
+<p>final修饰一个方法时，表示这个方法不会被重写（可以被重载成多个final方法）此处需要注意的一点是：因为重写的前提是子类可以从父类中继承此方法，如果父类中final修饰的方法同时访问控制权限为private，将会导致子类中不能直接继承到此方法，因此，此时可以在子类中定义相同的方法名和参数，此时不再产生重写与final的矛盾，而是在子类中重新定义了新的方法。（注：类的private方法会隐式地被指定为final方法。） </p>
+<p>final修饰成员变量时，标识这个变量只能被赋值一次，且不会被修改，如果final修饰一个引用类型时，则在对其初始化之后便不能再让其指向其他对象了，但该引用所指向的对象的内容是可以发生变化的。本质上是一回事，因为引用的值是一个地址，final要求值，即地址的值不发生变化。 </p>
+<h2 id="5-java-中的-Math-round-1-5-等于多少？"><a href="#5-java-中的-Math-round-1-5-等于多少？" class="headerlink" title="5.java 中的 Math.round(-1.5) 等于多少？"></a>5.java 中的 Math.round(-1.5) 等于多少？</h2><p>-1</p>
+<h2 id="6-String-属于基础的数据类型吗？"><a href="#6-String-属于基础的数据类型吗？" class="headerlink" title="6.String 属于基础的数据类型吗？"></a>6.String 属于基础的数据类型吗？</h2><p>不属于！ String 是final修饰的java类，java的基本类型有8种：</p>
+<p>​            1：字符型： byte char</p>
+<p>​            2：基本类型：short，int,long</p>
+<p>​            3:   浮点类型：float,double</p>
+<p>​            4:   布尔类型： boolean</p>
+<h2 id="7-java-中操作字符串都有哪些类？它们之间有什么区别？"><a href="#7-java-中操作字符串都有哪些类？它们之间有什么区别？" class="headerlink" title="7.java 中操作字符串都有哪些类？它们之间有什么区别？"></a>7.java 中操作字符串都有哪些类？它们之间有什么区别？</h2><p>String、StringBuffer、StringBuilder</p>
+<p>　　区别：String是不可变的对象，对每次对String类型的改变时都会生成一个新的对象，StringBuffer和StringBuilder是可以改变对象的。</p>
+<p>　　对于操作效率：StringBuilder &gt; StringBuffer &gt; String</p>
+<p>　　对于线程安全：StringBuffer 是线程安全，可用于多线程；StringBuilder 是非线程安全，用于单线程</p>
+<p>　　不频繁的字符串操作使用 String。反之，StringBuffer 和 StringBuilder 都优于String</p>
+<h2 id="8-String-str-”i”与-String-str-new-String-“i”-一样吗？"><a href="#8-String-str-”i”与-String-str-new-String-“i”-一样吗？" class="headerlink" title="8.String str=”i”与 String str=new String(“i”)一样吗？"></a>8.String str=”i”与 String str=new String(“i”)一样吗？</h2><p>不一样！他们不是同一个对象。前者是一个常量，后者重新new了一个对象，内存空间不一样。</p>
+<h2 id="9-如何将字符串反转？"><a href="#9-如何将字符串反转？" class="headerlink" title="9.如何将字符串反转？"></a>9.如何将字符串反转？</h2><p><a href="https://www.cnblogs.com/lanseyitai1224/p/6955609.html" target="_blank" rel="noopener">https://www.cnblogs.com/lanseyitai1224/p/6955609.html</a>   七八种方法 </p>
+<h2 id="10-String-类的常用方法都有那些？"><a href="#10-String-类的常用方法都有那些？" class="headerlink" title="10.String 类的常用方法都有那些？"></a>10.String 类的常用方法都有那些？</h2><p>eauals(),length(),concat(),charAt(),substring(),contains(),hashCode(),indexOf(),isEmpt() ……</p>
+<h2 id="11-抽象类必须要有抽象方法吗？"><a href="#11-抽象类必须要有抽象方法吗？" class="headerlink" title="11.抽象类必须要有抽象方法吗？"></a>11.抽象类必须要有抽象方法吗？</h2><p>抽象类不一定有抽象方法，但是有抽象方法的类一定是抽象类</p>
+<h2 id="12-普通类和抽象类有哪些区别？"><a href="#12-普通类和抽象类有哪些区别？" class="headerlink" title="12.普通类和抽象类有哪些区别？"></a>12.普通类和抽象类有哪些区别？</h2><p>1.抽象类不能被实例化。</p>
+<p>2.抽象类可以有构造函数，被继承时子类必须继承父类的一个构造方法，抽象方法不能被声明成静态方法。抽象类的构造函数用来初始化抽象类的一些字段，而这一切都在抽象类的派生类实例化之前发生。不仅如此，抽线类的构造函数还有一种巧妙应用：就是在其内部实现子类必须执行的代码。</p>
+<p>3.抽象方法允许声明，而无需实现，抽象类可以允许普通方法有主体。</p>
+<p>4.有抽象方法的类一定为抽象类，抽象类不一定只含有抽象方法。</p>
+<p>5.抽象类的子类必须实现抽象类中的所有抽象方法，否则这个类也是抽象类。</p>
+<h2 id="13-抽象类能使用-final-修饰吗？"><a href="#13-抽象类能使用-final-修饰吗？" class="headerlink" title="13.抽象类能使用 final 修饰吗？"></a>13.抽象类能使用 final 修饰吗？</h2><p>不可以，final关键字不可以用来修饰抽象类和接口</p>
+<h2 id="14-接口和抽象类有什么区别？"><a href="#14-接口和抽象类有什么区别？" class="headerlink" title="14.接口和抽象类有什么区别？"></a>14.接口和抽象类有什么区别？</h2><p>1.接口和抽象类都不能被实例化，如果要实例化，抽象类变量必须指向实现所有抽象方法的子类对象，接口变量必须指向实现所有接口方法的类对象。</p>
+<p>2.抽象类要被子类继承extends，接口要被类实现</p>
+<p>3.接口只能做方法申明，抽象类可以做方法申明，也可以做方法实现</p>
+<p>4.接口里定义的变量只能是公共的静态常量，抽象类定义的变量是普通变量 ..</p>
+<p>5.抽象类里面的抽象方法必须被子类全部实现，如果子类不能实现父类全部抽象方法，则这个子类也是抽象类；一个类实现接口的时候，如果不能全部实现接口方法，则这个类也是抽象类</p>
+<p>6.抽象方法只能声明，不能实现。抽象类是重构的结果，接口是设计的结果。</p>
+<p>7.抽象类里面可以没有抽象方法</p>
+<p>8.如果一个类里面有抽象方法，那么这个类是抽象类</p>
+<p>9.抽象方法要被实现，所以不能是私有的，也不能是静态的</p>
+<p>10.接口可以继承接口，并且可以多继承，而抽象类只能单根继承</p>
+<h2 id="15-java-中-IO-流分为几种？"><a href="#15-java-中-IO-流分为几种？" class="headerlink" title="15.java 中 IO 流分为几种？"></a>15.java 中 IO 流分为几种？</h2><p><a href="https://www.cnblogs.com/QQ846300233/p/6046388.html" target="_blank" rel="noopener">https://www.cnblogs.com/QQ846300233/p/6046388.html</a></p>
+<h2 id="16-BIO、NIO、AIO-有什么区别？"><a href="#16-BIO、NIO、AIO-有什么区别？" class="headerlink" title="16.BIO、NIO、AIO 有什么区别？"></a>16.BIO、NIO、AIO 有什么区别？</h2><p><a href="https://blog.csdn.net/u010310183/article/details/81700405" target="_blank" rel="noopener">https://blog.csdn.net/u010310183/article/details/81700405</a></p>
+<h2 id="17-Files的常用方法都有哪些？"><a href="#17-Files的常用方法都有哪些？" class="headerlink" title="17.Files的常用方法都有哪些？"></a>17.Files的常用方法都有哪些？</h2><p> <a href="https://www.cnblogs.com/cocoxu1992/p/10460994.html" target="_blank" rel="noopener">https://www.cnblogs.com/cocoxu1992/p/10460994.html</a></p>
+
+            
+        </section>
+        <footer class="blog-post-page-tags">
+        
+			
+		
+        </footer>
+    </article>
+    <article class="blog-post-page-readmore">
+    	
+    	
+		
+			<a href="/2019/05/11/hello-world/" class="blog-post-page-readmore-prev" data-toggle="tooltip" data-placement="top" title="Hello World">上一篇</a>
+		
+
+		
+		
+
+        <div style="clear: both;"></div>
+    </article>
+
+    <article class="blog-post-block blog-post-page-content">
+            <div class="row">
+            
+                <div class="col-md-4 col-sm-4 post-page-more-btn">
+                    <span data-toggle="modal" data-target="#post-donate-content">
+                        <span id="post-donate-btn" class="btn btn-danger btn-block" data-toggle="tooltip" data-placement="top" title="如果您觉得本文还不错或者对您有帮助，可以考虑打赏一下作者哦">打赏本文</span>
+                    </span>
+                </div>
+                <div class="col-md-4 col-sm-4 post-page-more-btn">
+                    <span data-toggle="modal" data-target="#post-qrcode-content">
+                        <span><span id="post-qrcode-btn" class="btn btn-success btn-block" data-toggle="tooltip" data-placement="top" title="微信扫描二维码手机端查看本文及分享本文">二维码</span></span>
+                    </span>
+                </div>
+            </div>
+        <div class="post-more-function-br"></div>
+
+        <div class="modal fade" id="post-donate-content" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">打赏本文</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row post-donate-content">
+                            <div class="col-md-4">
+                                <p>支付宝</p>
+                                <img class="post-donate-content-img no-lightbox" src="/images/alipay.jpg">
+                            </div>
+                            <div class="col-md-4">
+                                <p>微信</p>
+                                <img class="post-donate-content-img no-lightbox" src="/images/wechat.jpg">
+                            </div>
+                            <div class="col-md-4">
+                                <p>财付通</p>
+                                <img class="post-donate-content-img no-lightbox" src="/images/qq.jpg">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">关闭</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="post-qrcode-content" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-sm" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">文章二维码</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row post-qrcode-content">
+                            <span class="post-qrcode-content-canvas"></span>
+                            <img class="post-qrcode-content-img no-lightbox" src>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">关闭</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <script>
+            // post QRcode
+            // 中文转码
+            function toUtf8(str) {
+                var out, i, len, c;
+                out = "";
+                len = str.length;
+                for (i = 0; i < len; i++) {
+                    c = str.charCodeAt(i);
+                    if ((c >= 0x0001) && (c <= 0x007F)) {
+                        out += str.charAt(i);
+                    } else if (c > 0x07FF) {
+                        out += String.fromCharCode(0xE0 | ((c >> 12) & 0x0F));
+                        out += String.fromCharCode(0x80 | ((c >> 6) & 0x3F));
+                        out += String.fromCharCode(0x80 | ((c >> 0) & 0x3F));
+                    } else {
+                        out += String.fromCharCode(0xC0 | ((c >> 6) & 0x1F));
+                        out += String.fromCharCode(0x80 | ((c >> 0) & 0x3F));
+                    }
+                }
+                return out;
+            }
+            // 生成
+            var qrcode= $('.post-qrcode-content-canvas').qrcode({width: 150,height: 150,text: toUtf8("http://yoursite.com/2017/06/23/themes-life/")}).hide();
+            var canvas=qrcode.find('canvas').get(0);
+            $('.post-qrcode-content-img').attr('src',canvas.toDataURL('image/jpg'));
+        </script>
+
+        
+    </article>
+    
+</div>
+
+                
+            <footer class="blog-footer">
+                <p class="blog-footer-left">Copyright ©  2019 <a href="http://yoursite.com">AFBLOG</a></p>
+                <p class="blog-footer-right">Powered by <a href="https://hexo.io" target="_blank">Hexo</a>,Theme <a href="https://note.isweic.com/themes-life/" target="_blank">Life</a></p>
+            </footer>
+        </div><!--博客主栏结束-->
+        <!--博客侧边栏开始-->
+        <div class="col-xl-3 blog-sidebar">
+            <div class="blog-sidebar-title">
+                <a href>AFBLOG</a>
+            </div>
+            <div class="blog-sidebar-logo">
+                <img src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=2524418552,1449117851&fm=26&gp=0.jpg">
+            </div>
+            <div class="blog-sidebar-count blog-sidebar-padding">
+                <div class="blog-sidebar-count-left">
+                    <p class="blog-sidebar-count-p">2</p>
+                    <span class="blog-sidebar-count-span">文章</span>
+                </div>
+                <div class="blog-sidebar-count-right">
+                    <p class="blog-sidebar-count-p">0</p>
+                    <span class="blog-sidebar-count-span">标签</span>
+                </div>
+                <div style="clear: both;"></div>
+            </div>
+            <div class="blog-sidebar-icon blog-sidebar-padding">
+                <ul>
+                    <li><a href class="icon-github" target="_blank" data-toggle="tooltip" data-placement="top" title="Github"><i class="fa fa-github"></i></a></li>
+                    <li><a href class="icon-weibo" target="_blank" data-toggle="tooltip" data-placement="top" title="新浪微博"><i class="fa fa-weibo"></i></a></li>
+                    <li><a href class="icon-twitter" target="_blank" data-toggle="tooltip" data-placement="top" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+                    <!--<li><a href="" class="icon-facebook" target="_blank" data-toggle="tooltip" data-placement="top" title="FaceBook"><i class="fa fa-facebook"></i></a></li>-->
+                    <li><a href="mailto:" class="icon-email" data-toggle="tooltip" data-placement="top" title="E-Mail"><i class="fa fa-envelope"></i></a></li>
+                    <li><a href class="icon-rss" data-toggle="tooltip" target="_blank" data-placement="top" title="RSS"><i class="fa fa-rss"></i></a></li>
+                </ul>
+            </div>
+            <div class="blog-sidebar-categories">
+                <h4 class="blog-sidebar-h4"><i class="fa fa-folder-open"></i>&nbsp;文章分类</h4>
+                <ul class="list-group blog-sidebar-padding">
+                  
+                </ul>
+            </div>
+            <div class="blog-sidebar-tags">
+                <h4 class="blog-sidebar-h4"><i class="fa fa-tag"></i>&nbsp;标签云</h4>
+                <ul class="blog-sidebar-tags-ul blog-sidebar-padding">
+                  
+                </ul>
+            </div>
+            <script>
+              // 博客侧栏标签云随机色
+              var tag_cloud = $('.tag-could');
+              tag_cloud.each(function () {
+                  var Cnum = 9;
+                  var Crand = parseInt(Math.random() * Cnum);
+                  $(this).addClass("tag-could" + Crand);
+              })
+            </script>
+            <!--返回顶部按钮-->
+            <div class="retop">
+                <i class="fa fa-angle-up"></i>
+            </div>
+        </div><!--博客侧边栏结束-->
+    </div>
+</div>
+<script src="/js/LeanStatistics.min.js"></script>
+<script src="/js/Life.js"></script>
+<script type="text/javascript">
+    hljs.initHighlightingOnLoad();
+    hljs.initLineNumbersOnLoad();
+    otherF();
+    LeanStatistics();
+    $(document).pjax('a', '#pjax-box', {fragment:'#pjax-box', timeout:8000}).on('pjax:complete', function() {
+      $('pre code').each(function(i, block){
+        hljs.highlightBlock(block);
+      })
+      $('code.hljs').each(function(i, block) {
+        hljs.lineNumbersBlock(block);
+      });
+      LeanStatistics();
+    }).on('pjax:start', function() { NProgress.start(); }).on('pjax:end',   function() {
+      NProgress.done();
+      otherF();
+    });
+</script>
+</body>
+</html>
